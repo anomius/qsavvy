@@ -59,7 +59,23 @@ test = [
     "pytest-cov"
     ]
 
-dev = ["tox", "pre-commit", "virtualenv", "pip", "twine", "toml", "bump2version"]
+dev = ["tox", 
+        "pre-commit", 
+        "virtualenv", 
+        "pip", 
+        "twine", 
+        "toml", 
+        "bump2version",
+        "jupyterlab>=3.1.0",
+        "mypy",
+        "pylint",
+        "black",
+        "mkdocs",
+        "mkdocs-material",
+        "mkdocs-gen-files",
+        "mkdocs-literate-nav",
+        "mkdocs-section-index",
+        "mkdocstrings"]
 
 doc = [
     "mkdocs",
@@ -105,5 +121,15 @@ skip_gitignore = true
 #skip_glob = docs/conf.py
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
+requires = ["poetry-core>=1.0.0","numpy",
+    "qiskit",
+    "qiskit-optimization",
+    "dimod",
+    "matplotlib",
+    "seaborn",
+    "dwave-ocean-sdk",
+    "dwave_networkx",
+    "amazon-braket-default-simulator",
+    "amazon-braket-sdk",
+    "amazon-braket-ocean-plugin"]
 build-backend = "poetry.core.masonry.api"
